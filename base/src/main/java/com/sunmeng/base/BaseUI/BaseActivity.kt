@@ -1,4 +1,6 @@
 package com.sunmeng.base.BaseUI
 
-class BaseActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class BaseActivity<M : BaseViewModel> : AppCompatActivity() {
 }
