@@ -1,0 +1,4 @@
+include ':login'
+include ':base'
+include ':app'
+rootProject.name = "kotlin_base"
