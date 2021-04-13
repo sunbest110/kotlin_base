@@ -49,12 +49,12 @@ class BaseApplication : Application() {
      */
     class ApplicationLifecycleObserver : LifecycleObserver {
         @OnLifecycleEvent(Lifecycle.Event.ON_START)
-        private fun onAppForeground() {
+        fun onAppForeground() {
             Log.e(TAG, "应用在前台")
         }
 
         @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-        private fun onAppBackground() {
+        fun onAppBackground() {
             Log.e(TAG, "应用在前台")
         }
     }
