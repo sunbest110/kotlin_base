@@ -22,7 +22,7 @@ android {
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
-                includeCompileClasspath = true
+               // includeCompileClasspath = true //安卓5.0 remove includeCompileClasspath
             }
         }
     }
@@ -59,8 +59,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildFeatures{
-        dataBinding=true
+    buildFeatures {
+        dataBinding = true
     }
 //    dataBinding {
 //        enabled true
