@@ -8,6 +8,11 @@ import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ProcessLifecycleOwner
 import com.alibaba.android.arouter.launcher.ARouter
 import com.sunmeng.base.BuildConfig
+import com.sunmeng.base.di.appModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.android.logger.AndroidLogger
+import org.koin.core.context.startKoin
 
 
 class BaseApplication : Application() {
@@ -29,12 +34,21 @@ class BaseApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        //Arouter初始化
         if (BuildConfig.DEBUG) {
             ARouter.openLog()
             ARouter.openDebug()
         }
         ARouter.init(this)
+        //lifecycle 生命周期
         ProcessLifecycleOwner.get().lifecycle.addObserver(ApplicationLifecycleObserver())
+        //koin 注解
+       // startKoin(this, appModule, logger = AndroidLogger(showDebug = BuildConfig.DEBUG))
+        startKoin {
+            androidLogger()
+            androidContext(this@BaseApplication)
+            modules(appModule)
+        }
     }
 
     /**

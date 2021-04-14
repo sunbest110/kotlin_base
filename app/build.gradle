@@ -38,9 +38,11 @@ android {
     }
     productFlavors {
         push {
+            dimension "default"
             applicationId = "com.sunmengmeng.kotlin_base" //为了配合最初的push推送测试环境的包名，增加一个push模式这个包名与push的debug对应
         }
         app {
+            dimension "default"
             applicationId = "com.sunmengmeng.kotlin_base"
         }
     }
