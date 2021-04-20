@@ -97,6 +97,7 @@ dependencies {
     api rootProject.ext.dependencies.retrofit
     api rootProject.ext.dependencies["converter-gson"]
     api rootProject.ext.dependencies["adapter-rxjava"]
+    api rootProject.ext.dependencies["logging-interceptor"]
     //json解析
     api rootProject.ext.dependencies.gson
     //glide图片加载库

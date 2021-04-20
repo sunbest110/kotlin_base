@@ -50,6 +50,7 @@ ext {
             "retrofit"                             : "com.squareup.retrofit2:retrofit:2.9.0",
             "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.9.0",
             "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.9.0",
+            "logging-interceptor"                  : 'com.squareup.okhttp3:logging-interceptor:3.9.0',
             //lifecycle
             "lifecycle-viewmodel"                  : "androidx.lifecycle:lifecycle-viewmodel:${versions["lifecycle_version"]}",
             // LiveData
